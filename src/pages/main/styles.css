@@ -17,6 +17,13 @@
     color: #999;
     margin-top: 5px;
     line-height: 24px;
+    margin-bottom: 15px;
+}
+
+.characters-list article span {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
 }
 
 .characters-list article a {
@@ -38,4 +45,26 @@
 .characters-list article a:hover{
     color: red;
     border: solid red;
+}
+
+.characters-list .pagination {
+    display: flex;
+    justify-content: space-between;  /* Para jogar um botão totalmente para direita e outro para esquerda  */
+    margin-bottom: 20px;
+
+}
+
+.characters-list .pagination button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.characters-list .pagination button:hover {
+    opacity: 0.5;
 }

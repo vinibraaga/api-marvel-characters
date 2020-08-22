@@ -1,0 +1,47 @@
+.character-info {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+}
+
+.character-info img {
+    width: 150px;
+}
+
+.character-info h1 {
+    font-size: 32px;
+}
+
+.character-info p {
+    color: #666;
+    line-height: 24px;
+    margin: 15px 0 15px 0;
+}
+
+.character-info .previous {
+    display: flex;
+    justify-content: flex-end;  /* Para jogar um botão totalmente para direita e outro para esquerda  */
+    margin-bottom: 20px;
+
+}
+
+.character-info .previous .previous-link {
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.character-info .previous .previous-link:hover {
+    opacity: 0.5;
+}
