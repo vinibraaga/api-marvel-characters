@@ -1,0 +1,46 @@
+.pass {
+    max-width: 700px;
+    margin: 150px auto 0;
+    padding: 0 20px;
+    display: grid;
+    justify-items: center;
+}
+
+.pass h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.pass input {
+    height: 40px;
+    width: 350px;
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.previous {
+    display: flex;
+    justify-content: center;  /* Para jogar um botão totalmente para direita e outro para esquerda  */
+    margin-bottom: 20px;
+
+}
+
+.previous .previous-link {
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.previous .previous-link:hover {
+    background: red;
+    opacity: 0.9;
+}

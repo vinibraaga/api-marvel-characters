@@ -60,7 +60,7 @@ export default class Character extends Component {
                 ))}
 
                 <div className="previous">
-                    <Link to={`/`} className="previous-link">Voltar</Link>
+                    <Link to={`/characters`} className="previous-link">Voltar</Link>
                 </div>
 
                 {comics.map(comic => (
