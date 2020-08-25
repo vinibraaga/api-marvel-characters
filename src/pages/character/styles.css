@@ -1,6 +1,6 @@
 .character-info {
     max-width: 700px;
-    margin: 20px auto 0;
+    margin: 25px auto 0;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
@@ -44,4 +44,14 @@
 
 .character-info .previous .previous-link:hover {
     opacity: 0.5;
+}
+
+.comics-info {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.comics-info h2 {
+    font-size:16px;
+    margin: 15px 0 15px;
 }

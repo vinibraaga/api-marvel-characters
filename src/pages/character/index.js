@@ -65,9 +65,12 @@ export default class Character extends Component {
 
                 {comics.map(comic => (
                     <article key={comic.id}>
-    
-                        <h1>{comic.name}</h1>
-                        <img src={comic.thumbnail.path + "." + comic.thumbnail.extension}></img>
+                        
+                        <div className="comics-info">
+                            <h2>{comic.title}</h2>
+                            <img src={comic.thumbnail.path + "." + comic.thumbnail.extension}></img>
+                        </div>
+                        
 
                     </article>
                 ))}

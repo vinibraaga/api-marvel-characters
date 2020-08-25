@@ -7,23 +7,25 @@ import './styles.css';
 export default class Main extends Component {
     state = {
         characters: [],
+        pagesInfo: [],
+        page: 0,
     }
 
     componentDidMount() {
         this.loadCharacters();
     }
 
-    loadCharacters = async () => {
+    loadCharacters = async ( page = 1) => {
         const ts = "get";
         const apikey = "847c34aead6f554b0145ec1203fb7151";
         const hash = "c466ff8feb59b13b16bfdf72d8d42d7d";
 
-        const response = await api.get(`v1/public/characters?ts=${ts}&apikey=${apikey}&hash=${hash}&limit=6?`);
+        const response = await api.get(`v1/public/characters?ts=${ts}&apikey=${apikey}&hash=${hash}&limit=6&offset=${page}?`);
 
-        const { results } = response.data.data;
+        const { results, ... pagesInfo } = response.data.data;
 
-        this.setState({ characters: results });
-        console.log(response.data.data)
+        this.setState({ characters: results, pagesInfo });
+        console.log(pagesInfo)
     };
 
     prevPage = () => {
@@ -31,7 +33,13 @@ export default class Main extends Component {
     }
 
     nextPage = () => {
+        const { page, pagesInfo } = this.state
 
+        if (page == pagesInfo.offset) return;
+
+        const pageNumber = page + 6;
+
+        this.loadCharacters(pageNumber);
     }
 
     render() {
